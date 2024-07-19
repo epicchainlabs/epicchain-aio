@@ -1,0 +1,85 @@
+wallet:
+  path: /config/node-wallet.json
+  address: Nhfg3TbpwogLvDGVvAvqyThbsHgoSUKwtn
+  password: 'one'
+
+without_mainnet: true
+
+morph:
+  validators: 02b3622bf4017bdfe317c58aed5f4c753f206b7db896046fa7d774bbc4bf7f8dc2
+  consensus:
+    magic: 15405
+    committee:
+      - 02b3622bf4017bdfe317c58aed5f4c753f206b7db896046fa7d774bbc4bf7f8dc2
+    storage:
+      type: boltdb
+      path: "/chain/morph.bolt"
+    time_per_block: 1s
+    max_traceable_blocks: 200000
+    seed_nodes:
+      - 127.0.0.1:20333
+    rpc:
+      listen:
+        - 0.0.0.0:30333
+    p2p:
+      dial_timeout: 3s
+      proto_tick_interval: 2s
+      listen:
+        - 127.0.0.1:20333
+      peers:
+        min: 0
+        max: 10
+        attempts: 5
+      ping:
+        interval: 30s
+        timeout: 90s
+    set_roles_in_genesis: true
+
+fschain_autodeploy: true
+
+timers:
+  emit:  50
+  stop_estimation:
+    mul: 1
+    div: 4
+  collect_basic_income:
+    mul: 1
+    div: 2
+  distribute_basic_income:
+    mul: 3
+    div: 4
+
+emit:
+  storage:
+    amount: 400000000
+
+audit:
+  pdp:
+    max_sleep_interval: 100ms
+
+netmap_cleaner:
+  enabled: true
+  threshold: 3
+
+workers:
+  netmap: 100
+  balance: 100
+  neofs: 100
+  container: 100
+  alphabet: 100
+  reputation: 100
+
+logger:
+  level: debug
+
+pprof:
+  enabled: false
+  address: localhost:6661
+
+prometheus:
+  enabled: false
+  address: localhost:6662
+
+control:
+  grpc:
+    endpoint: localhost:16512

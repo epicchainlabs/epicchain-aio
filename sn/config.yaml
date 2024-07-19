@@ -1,0 +1,71 @@
+morph:
+  endpoints:
+    - ws://localhost:30333/ws
+  dial_timeout: 20s
+
+control:
+  grpc:
+    endpoint: localhost:16513
+
+node:
+  wallet:
+    path: /config/wallet-sn.json
+    password: ""
+  addresses:
+    - grpc://0.0.0.0:8080
+  attribute_0: UN-LOCODE:DE FKS
+  attribute_1: Price:10
+  attribute_2: Deployed:Private
+
+grpc:
+  num: 1
+  0:
+    endpoint: 0.0.0.0:8080
+    tls:
+      enables: false
+
+logger:
+  level: debug
+
+prometheus:
+  enabled: false
+  address: localhost:6664
+
+pprof:
+  enabled: false
+  address: localhost:6663
+
+storage:
+  shard_num: 1
+  shard:
+    0:
+      writecache:
+        enabled: false
+      metabase:
+        path: /data/metabase.db
+        perm: 0770
+      blobstor:
+        - type: peapod
+          path: /data/blob/peapod.db
+        - type: fstree
+          path: /data/blob
+      gc:
+        remover_batch_size: 100
+        remover_sleep_interval: 5m
+      pilorama:
+        path: tmp/0/blob/pilorama.db # path to the pilorama database. If omitted, `pilorama.db` file is created blobstor.path
+        max_batch_delay: 10ms
+        max_batch_size: 200
+
+object:
+  put:
+    pool_size_remote: 100
+    pool_size_local: 100
+
+tree:
+  enabled: true
+  cache_size: 15
+  replication_worker_count: 16
+  replication_channel_capacity: 16
+  replication_timeout: 5s
+  sync_interval: 1h

@@ -1,0 +1,18 @@
+[Unit]
+Description=NeoFS All-in-One service
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+
+WorkingDirectory=/opt/neofs
+
+# Compose up
+ExecStart=/usr/bin/docker-compose up
+
+# Compose down, remove containers and keep volumes
+ExecStop=/usr/bin/docker-compose down
+
+[Install]
+WantedBy=multi-user.target
