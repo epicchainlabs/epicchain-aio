@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # NeoGo binary path.
-NEOGO="${NEOGO:-docker exec aio neo-go}"
+EPICCHAINGO="${EPICCHAINGO:-docker exec aio epicchain-go}"
 
 # Wallet file to change config value
 WALLET="${WALLET:-morph/node-wallet.json}"
@@ -10,7 +10,7 @@ CONFIG_IMG="${CONFIG:-/config/node-config.yaml}"
 # Netmap contract address resolved by NNS
 NETMAP_ADDR=$(./bin/resolve.sh netmap.neofs) || die "Failed to resolve 'netmap.neofs' domain name"
 
-# NeoFS configuration record: key is a string and value is an int
+# e configuration record: key is a string and value is an int
 KEY=${1}
 VALUE="${2}"
 
