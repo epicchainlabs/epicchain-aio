@@ -19,7 +19,7 @@
       "isdefault": false
     },
     {
-      "address": "NfgHwwTi3wHAS8aFAN243C5vGbkYDpqLHP",
+      "address": "XqCx9XDJtmWrUwmE7pUEh1iMKETpBD5AEk",
       "key": "6PYM8VdX2BSm7BSXKzV4Fz6S3R9cDLLWNrD9nMjxW352jEv3fsC8N3wNLY",
       "label": "consensus",
       "contract": {
@@ -36,7 +36,7 @@
       "isdefault": false
     },
     {
-      "address": "NfgHwwTi3wHAS8aFAN243C5vGbkYDpqLHP",
+      "address": "XhVKWczT2euGEhv67kezpKHGAn69Ngjk4r",
       "key": "6PYM8VdX2BSm7BSXKzV4Fz6S3R9cDLLWNrD9nMjxW352jEv3fsC8N3wNLY",
       "label": "committee",
       "contract": {
