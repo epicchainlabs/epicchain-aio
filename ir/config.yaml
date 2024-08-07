@@ -6,11 +6,11 @@ wallet:
 without_mainnet: true
 
 morph:
-  validators: 02b3622bf4017bdfe317c58aed5f4c753f206b7db896046fa7d774bbc4bf7f8dc2
+  validators: 02ecaa220948f03171dedcb36f9c3de959be066c0bc289b1032c8702caa376fddb
   consensus:
     magic: 15405
     committee:
-      - 02b3622bf4017bdfe317c58aed5f4c753f206b7db896046fa7d774bbc4bf7f8dc2
+      - 02ecaa220948f03171dedcb36f9c3de959be066c0bc289b1032c8702caa376fddb
     storage:
       type: boltdb
       path: "/chain/morph.bolt"
