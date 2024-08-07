@@ -68,7 +68,7 @@ To deploy the EpicChain services, follow these steps:
        UN-LOCODE: DE FKS
    ```
 
-6. **Updating Epoch**: If needed, update the NeoFS epoch to reflect changes.
+6. **Updating Epoch**: If needed, update the EpicChain epoch to reflect changes.
 
    ```sh
    $ make tick.epoch
@@ -106,7 +106,7 @@ $ make image-aio
 
 ### Setting Up a Simple Web Application
 
-This section outlines how to create a container, store objects, and interact with the NeoFS system using both command-line and REST API methods.
+This section outlines how to create a container, store objects, and interact with the EpicChain system using both command-line and REST API methods.
 
 #### Creating a Container
 
@@ -193,7 +193,7 @@ Example output:
 }
 ```
 
-For detailed information on the REST API supported by NeoFS REST Gateway, refer to its OpenAPI specification available at [http://localhost:8090](http://localhost:8090). For more information, also check out the [neofs-rest-gw repository](https://github.com/nspcc-dev/neofs-rest-gw).
+For detailed information on the REST API supported by EpicChain REST Gateway, refer to its OpenAPI specification available at [http://localhost:8090](http://localhost:8090). For more information, also check out the [epicchain-rest-gw repository](https://github.com/epicchainlabs/epicchain-rest-gw).
 
 #### Getting an Object via Nginx
 
