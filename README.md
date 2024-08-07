@@ -149,7 +149,7 @@ Example output:
   "cannedAcl": "public-read",
   "containerId": "iafCKZmWu1mahdxxcA6HRYdB5S9BrypYF1qNqpQezpA",
   "containerName": "",
-  "ownerId": "NPFCqWHfi9ixCJRu7DABRbVfXRbkSEr9Vo",
+  "ownerId": "XqCx9XDJtmWrUwmE7pUEh1iMKETpBD5AEk",
   "placementPolicy": "REP 1",
   "version": "v2.13"
 }
