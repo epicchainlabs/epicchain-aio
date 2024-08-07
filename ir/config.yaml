@@ -1,6 +1,6 @@
 wallet:
   path: /config/node-wallet.json
-  address: Nhfg3TbpwogLvDGVvAvqyThbsHgoSUKwtn
+  address: XrTATFdLEVbbcAwfiQZF7qqLHMfWPa3XxA
   password: 'one'
 
 without_mainnet: true
@@ -64,7 +64,7 @@ netmap_cleaner:
 workers:
   netmap: 100
   balance: 100
-  neofs: 100
+  epicchain: 100
   container: 100
   alphabet: 100
   reputation: 100
