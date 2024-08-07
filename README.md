@@ -114,7 +114,7 @@ This section outlines how to create a container, store objects, and interact wit
 
    ```sh
    $ epicchain-cli -r localhost:8080 -w rest-gw/wallet.json \
-                   --address NPFCqWHfi9ixCJRu7DABRbVfXRbkSEr9Vo \
+                   --address XqCx9XDJtmWrUwmE7pUEh1iMKETpBD5AEk \
                    container create \
                    --policy "REP 1" --basic-acl public-read --await
    ```
