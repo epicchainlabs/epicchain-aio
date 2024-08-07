@@ -17,7 +17,7 @@ while getopts d:h:r: option; do
   esac
 done
 
-export NEOGO=/usr/bin/neo-go
+export EPICCHAINGO=/usr/bin/epicchain-go
 export WALLET=/config/node-wallet.json
 
 /usr/bin/neofs-ir --config /config/config-ir.yaml &
@@ -30,7 +30,7 @@ done
 CONSADDR=$(jq -r .accounts[2].address "${WALLET}")
 SNADDR=$(jq -r  .accounts[0].address /config/wallet-sn.json)
 
-${NEOGO} wallet nep17 transfer \
+${EPICCHAINGO} wallet nep17 transfer \
         --wallet-config /config/node-config.yaml \
         -r http://localhost:30333 \
         --from ${CONSADDR} --force \
