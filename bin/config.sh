@@ -22,7 +22,7 @@ ADDR=$(jq -r .accounts[2].address "${WALLET}")
 
 # Change config value in side chain
 echo "Changing ${KEY} configuration value to ${VALUE}"
-${NEOGO} contract invokefunction \
+${EPICCHAINGO} contract invokefunction \
 	--wallet-config "${CONFIG_IMG}" \
   -a "${ADDR}" --force \
   -r http://localhost:30333 \
