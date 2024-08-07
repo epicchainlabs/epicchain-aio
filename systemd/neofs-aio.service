@@ -1,12 +1,12 @@
 [Unit]
-Description=NeoFS All-in-One service
+Description=EpicChain All-in-One Deployment Guide
 Requires=docker.service
 After=docker.service
 
 [Service]
 Restart=always
 
-WorkingDirectory=/opt/neofs
+WorkingDirectory=/opt/epicchain
 
 # Compose up
 ExecStart=/usr/bin/docker-compose up
