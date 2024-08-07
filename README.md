@@ -56,7 +56,7 @@ To deploy the EpicChain services, follow these steps:
 
    ```sh
    Epoch: 45
-   Node 1: 022bb4041c50d607ff871dec7e4cd7778388e0ea6849d84ccbd9aa8f32e16a8131 ONLINE /dns4/localhost/tcp/8080
+   Node 1: 02ecaa220948f03171dedcb36f9c3de959be066c0bc289b1032c8702caa376fddb ONLINE /dns4/localhost/tcp/8080
        Continent: Europe
        Country: Germany
        CountryCode: DE
