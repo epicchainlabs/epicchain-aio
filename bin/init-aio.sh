@@ -20,9 +20,9 @@ done
 export EPICCHAINGO=/usr/bin/epicchain-go
 export WALLET=/config/node-wallet.json
 
-/usr/bin/neofs-ir --config /config/config-ir.yaml &
+/usr/bin/epicchain-ir --config /config/config-ir.yaml &
 
-while [[ -z "$(/usr/bin/neofs-cli control healthcheck --ir --endpoint localhost:16512 -c /config/cli-cfg-ir.yaml | grep 'Health status: READY')" ]];
+while [[ -z "$(/usr/bin/epicchain-cli control healthcheck --ir --endpoint localhost:16512 -c /config/cli-cfg-ir.yaml | grep 'Health status: READY')" ]];
 do
   sleep 2;
 done
@@ -40,11 +40,11 @@ ${EPICCHAINGO} wallet nep17 transfer \
 	--await
 
 set -m
-/usr/bin/neofs-node --config /config/config-sn.yaml &
+/usr/bin/epicchain-node --config /config/config-sn.yaml &
 
 cd /config # tick.sh and config.sh require this working directory
 
-while [[ -z "$(/usr/bin/neofs-cli control healthcheck --endpoint localhost:16513 -c /config/cli-cfg-sn.yaml | grep 'Network status: ONLINE')" ]];
+while [[ -z "$(/usr/bin/epicchain-cli control healthcheck --endpoint localhost:16513 -c /config/cli-cfg-sn.yaml | grep 'Network status: ONLINE')" ]];
 do
   ./bin/tick.sh
   sleep 2
@@ -56,7 +56,7 @@ set -a
 
 if [ $IS_START_REST = "true" ]; then
     . /config/rest.env
-    /usr/bin/neofs-rest-gw &
+    /usr/bin/epicchain-rest-gw &
 
     while [[ "$(curl -s -o /dev/null -w %{http_code} $REST_GW_SERVER_ENDPOINTS_0_ADDRESS)" != "307" ]];
     do
