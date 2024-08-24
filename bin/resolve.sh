@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# NeoGo binary path.
+# EpicChainGo binary path.
 NEOGO="${NEOGO:-docker exec aio neo-go}"
 # NNS contract script hash
 NNS_ADDR=$(curl -s --data '{ "id": 1, "jsonrpc": "2.0", "method": "getcontractstate", "params": [1] }' http://localhost:30333/ | jq -r '.result.hash')
