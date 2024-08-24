@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# NeoGo binary path.
+# EpicCHAINGo binary path.
 NEOGO="${NEOGO:-docker exec aio neo-go}"
 
 # Wallet file to change config value
