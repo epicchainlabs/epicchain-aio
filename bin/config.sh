@@ -7,7 +7,7 @@ EPICCHAINGO="${EPICCHAINGO:-docker exec aio epicchain-go}"
 WALLET="${WALLET:-morph/node-wallet.json}"
 CONFIG_IMG="${CONFIG:-/config/node-config.yaml}"
 
-# Netmap contract address resolved by NNS
+# Netmap contract address resolved by XNS
 NETMAP_ADDR=$(./bin/resolve.sh netmap.epicchain) || die "Failed to resolve 'netmap.epicchain' domain name"
 
 # e configuration record: key is a string and value is an int
