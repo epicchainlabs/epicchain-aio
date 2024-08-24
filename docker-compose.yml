@@ -21,7 +21,7 @@ services:
       - data:/data
     ports:
       - "30333:30333" # RPC
-      - "8080:8080"   # NeoFS API RPC
+      - "8080:8080"   # EpicChain API RPC
       - "16513:16513" # Control service
       - "8090:8090" # REST Gateway endpoint
 
