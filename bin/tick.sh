@@ -7,7 +7,7 @@ NEOGO="${NEOGO:-docker exec aio neo-go}"
 WALLET="${WALLET:-./ir/node-wallet.json}"
 CONFIG_IMG="${CONFIG:-/config/node-config.yaml}"
 
-# Netmap contract address resolved by NNS
+# Netmap contract address resolved by XNS
 NETMAP_ADDR=$(./bin/resolve.sh netmap.neofs)
 
 # Internal variables
